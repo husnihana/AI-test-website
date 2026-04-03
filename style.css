@@ -7,7 +7,7 @@
   --text: #1c1e21;
   --muted: #606770;
   --border: #d8dade;
-  --brand: #00a400;
+  --brand: #2563EB;
   --radius: 18px;
   --shadow: 0 8px 24px rgba(28, 30, 33, 0.08);
 }
@@ -65,8 +65,8 @@ td {
   height: 30px;
   display: grid;
   place-items: center;
-  background: #e4f8eb;
-  color: #00a400;
+  background: #EFF6FF;
+  color: #2563EB;
   border-radius: 50%;
 }
 
@@ -106,15 +106,20 @@ td {
   font-size: 14px;
 }
 
-.nav-icon.start::before { content: "📘"; }
-.nav-icon.chats::before { content: "💬"; }
-.nav-icon.business::before { content: "🏢"; }
-.nav-icon.calls::before { content: "📞"; }
-.nav-icon.communities::before { content: "👥"; }
-.nav-icon.channels::before { content: "🧭"; }
-.nav-icon.security::before { content: "🔒"; }
-.nav-icon.bans::before { content: "🚫"; }
-.nav-icon.payments::before { content: "💳"; }
+.nav-icon.what-is::before      { content: "📄"; }
+.nav-icon.how-works::before    { content: "⚙️"; }
+.nav-icon.upload::before       { content: "⬆️"; }
+.nav-icon.mybox::before        { content: "📁"; }
+.nav-icon.categories::before   { content: "🗂️"; }
+.nav-icon.collections::before  { content: "📚"; }
+.nav-icon.metadata::before     { content: "🏷️"; }
+.nav-icon.chat-ai::before      { content: "🤖"; }
+.nav-icon.ai-modes::before     { content: "✨"; }
+.nav-icon.sharing::before      { content: "🔗"; }
+.nav-icon.troubleshoot::before { content: "🔧"; }
+.nav-icon.language::before     { content: "🌐"; }
+.nav-icon.compatibility::before { content: "📋"; }
+.nav-icon.access::before       { content: "🔐"; }
 
 .nav-label {
   flex: 1;
@@ -213,21 +218,21 @@ td {
   border-radius: 18px;
   display: grid;
   place-items: center;
-  background: #e4f8eb;
-  color: #00a400;
+  background: #EFF6FF;
+  color: #2563EB;
   font-size: 22px;
 }
 
-.topic-artwork.get-started::before { content: "📱"; }
-.topic-artwork.security::before { content: "🔒"; }
-.topic-artwork.backup::before { content: "☁️"; }
-.topic-artwork.teens::before { content: "💚"; }
-.topic-artwork.ads::before { content: "📣"; }
-.topic-artwork.business::before { content: "🏬"; }
+.topic-artwork.what-is::before       { content: "📄"; }
+.topic-artwork.how-works::before     { content: "⚙️"; }
+.topic-artwork.upload::before        { content: "⬆️"; }
+.topic-artwork.ai-modes::before      { content: "✨"; }
+.topic-artwork.troubleshoot::before  { content: "🔧"; }
+.topic-artwork.access::before        { content: "🔐"; }
 
 .search-icon::before { content: "🔍"; }
 
-.brand-icon::before { content: "💬"; font-size: 14px; }
+.brand-icon::before { content: "📝"; font-size: 14px; }
 
 .topic-card h3 {
   margin: 0;
@@ -301,7 +306,7 @@ td {
 }
 
 .meta-brand {
-  color: #00875f;
+  color: #2563EB;
   font-weight: 700;
 }
 
