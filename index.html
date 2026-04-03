@@ -4,92 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doc-Scribe Help Centre</title>
+  <meta name="description" content="Doc-Scribe.ai Help Centre - AI-powered document intelligence platform documentation and guides." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page-shell">
-    <aside class="sidebar">
-      <div class="sidebar-brand">
-        <span class="brand-icon"></span>
-        <div>
-          <p class="brand-name">Doc-Scribe Help Centre</p>
-        </div>
-      </div>
-
-      <nav class="sidebar-nav">
-        <a class="nav-item" href="get-started.html">
-          <span class="nav-icon what-is"></span>
-          <span class="nav-label">What is Doc-Scribe.ai</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon how-works"></span>
-          <span class="nav-label">How Doc-Scribe.ai Works</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon upload"></span>
-          <span class="nav-label">Upload Your First Document</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon mybox"></span>
-          <span class="nav-label">My Box vs Categories</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon categories"></span>
-          <span class="nav-label">Creating Categories</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon collections"></span>
-          <span class="nav-label">Using Collections</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon metadata"></span>
-          <span class="nav-label">Metadata and Tagging</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon chat-ai"></span>
-          <span class="nav-label">Interacting with Chat AI</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon ai-modes"></span>
-          <span class="nav-label">Understanding AI Modes</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon sharing"></span>
-          <span class="nav-label">Sharing Documents</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon troubleshoot"></span>
-          <span class="nav-label">Troubleshooting Common Issues</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon language"></span>
-          <span class="nav-label">Choose Your Language</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon compatibility"></span>
-          <span class="nav-label">File Compatibility</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-        <a class="nav-item" href="#">
-          <span class="nav-icon access"></span>
-          <span class="nav-label">User Access Control</span>
-          <span class="nav-chevron">▾</span>
-        </a>
-      </nav>
-    </aside>
-
+    <aside class="sidebar" id="sidebar"></aside>
     <main class="content">
       <header class="topbar">
         <div></div>
@@ -98,10 +19,11 @@
 
       <section class="hero-panel">
         <h1>How can we help you?</h1>
-        <form class="search-form" action="#">
+        <form class="search-form" action="#" id="search-form">
           <span class="search-icon"></span>
-          <input type="search" placeholder="Search help articles..." aria-label="Search help articles" />
+          <input type="search" id="search-input" placeholder="Search help articles..." aria-label="Search help articles" autocomplete="off" />
         </form>
+        <ul class="search-results" id="search-results" role="listbox" aria-label="Search results"></ul>
       </section>
 
       <section class="popular-topics">
@@ -109,79 +31,57 @@
           <h2>Popular Topics</h2>
         </div>
         <div class="topics-grid">
-          <article class="topic-card">
+          <a class="topic-card" href="get-started.html">
             <div class="topic-artwork what-is"></div>
             <h3>What is Doc-Scribe.ai</h3>
             <p>Learn how Doc-Scribe.ai transforms document management with AI-powered intelligence.</p>
-          </article>
-          <article class="topic-card">
+          </a>
+          <a class="topic-card" href="how-it-works.html">
             <div class="topic-artwork how-works"></div>
             <h3>How Doc-Scribe.ai Works</h3>
             <p>Discover the DMS and private AI engine that powers secure document analysis.</p>
-          </article>
-          <article class="topic-card">
+          </a>
+          <a class="topic-card" href="upload.html">
             <div class="topic-artwork upload"></div>
             <h3>Upload Your First Document</h3>
             <p>Follow a simple step-by-step guide to upload and process your first document.</p>
-          </article>
-          <article class="topic-card">
+          </a>
+          <a class="topic-card" href="ai-modes.html">
             <div class="topic-artwork ai-modes"></div>
             <h3>Understanding AI Modes</h3>
             <p>Explore six AI modes — General Query, Visualizer, Analyst, Reviewer, Transcript, and Extractor.</p>
-          </article>
-          <article class="topic-card">
+          </a>
+          <a class="topic-card" href="troubleshooting.html">
             <div class="topic-artwork troubleshoot"></div>
             <h3>Troubleshooting Common Issues</h3>
             <p>Find quick solutions to the most common upload, access, and AI search problems.</p>
-          </article>
-          <article class="topic-card">
+          </a>
+          <a class="topic-card" href="access-control.html">
             <div class="topic-artwork access"></div>
             <h3>User Access Control</h3>
             <p>Manage Global Access and Category permissions to keep your data secure.</p>
-          </article>
+          </a>
         </div>
       </section>
 
       <section class="popular-articles">
         <h2>Popular Articles</h2>
         <ul>
-          <li><a href="#">How to upload your first document</a></li>
-          <li><a href="#">How to use Chat AI to query documents</a></li>
-          <li><a href="#">Understanding the six AI Modes</a></li>
-          <li><a href="#">How to create and manage categories</a></li>
-          <li><a href="#">How to share documents with other users</a></li>
-          <li><a href="#">Setting up metadata and file tags</a></li>
-          <li><a href="#">Troubleshooting AI Search not working</a></li>
+          <li><a href="upload.html">How to upload your first document</a></li>
+          <li><a href="chat-ai.html">How to use Chat AI to query documents</a></li>
+          <li><a href="ai-modes.html">Understanding the six AI Modes</a></li>
+          <li><a href="creating-categories.html">How to create and manage categories</a></li>
+          <li><a href="sharing.html">How to share documents with other users</a></li>
+          <li><a href="metadata.html">Setting up metadata and file tags</a></li>
+          <li><a href="troubleshooting.html">Troubleshooting AI Search not working</a></li>
         </ul>
       </section>
 
-      <footer class="site-footer">
-        <div class="footer-links">
-          <div>
-            <p class="footer-label">Doc-Scribe.ai</p>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Download</a>
-          </div>
-          <div>
-            <p class="footer-label">About Us</p>
-            <a href="#">Our Team</a>
-            <a href="#">Security</a>
-            <a href="#">Privacy &amp; Terms</a>
-          </div>
-          <div>
-            <p class="footer-label">Get In Touch</p>
-            <a href="#">Contact Us</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">X (Twitter)</a>
-          </div>
-        </div>
-        <div class="footer-meta">
-          <p>Doc-Scribe Help Centre</p>
-          <p>&copy; 2026 Doc-Scribe.ai</p>
-        </div>
-      </footer>
+      <div id="footer"></div>
     </main>
   </div>
+  <script src="sidebar.js"></script>
+  <script src="footer.js"></script>
+  <script src="search.js"></script>
 </body>
 </html>
